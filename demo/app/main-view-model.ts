@@ -6,24 +6,33 @@ export class HelloWorldModel extends Observable {
     private cardio: Cardio;
 
     constructor() {
+
         super();
         this.cardio = new Cardio();
+
     }
 
-    onScanPress() {
-        requestPermissions().then(
-            () => {
-                console.log("permissions");
-                this.cardio.onScan().then(
-                    (data) => {
-                        console.log(data);
+    public onScanPress() {
+
+        requestPermissions()
+            .then(() => {
+
+
+                this.cardio.onScan()
+                    .then((data) => {
+
+                        console.dir(data);
+
                     }, (error) => {
+
                         console.log(error);
-                    }
-                );
+
+                    });
+
             }, () => {
+
                 console.log("permissions denied");
-            }
-        );
+
+            });
     }
 }
