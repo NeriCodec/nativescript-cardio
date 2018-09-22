@@ -35,7 +35,8 @@ requestPermissions()
             console.log("Permissions denied: " + error);
 
         });
-```)
+
+```
     
 ## License
 
