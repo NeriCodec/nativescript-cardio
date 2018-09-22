@@ -14,28 +14,28 @@ tns plugin add nativescript-cardio
 
 ## Usage 
 	
-	```javascript
-    requestPermissions()
-            .then(() => {
+```javascript
+requestPermissions()
+        .then(() => {
 
 
-                this.cardio.onScan()
-                    .then((data) => {
+            this.cardio.onScan()
+                .then((data) => {
 
-                        console.dir(data);
+                    console.dir(data);
 
-                    }, (error) => {
+                }, (error) => {
 
-                        console.log(error);
+                    console.log(error);
 
-                    });
+                });
 
-            }, (error) => {
+        }, (error) => {
 
-                console.log("Permissions denied: " + error);
+            console.log("Permissions denied: " + error);
 
-            });
-    ```)
+        });
+```)
     
 ## License
 
