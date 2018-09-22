@@ -29,9 +29,9 @@ export class HelloWorldModel extends Observable {
 
                     });
 
-            }, () => {
+            }, (error) => {
 
-                console.log("permissions denied");
+                console.log("Permissions denied: " + error);
 
             });
     }

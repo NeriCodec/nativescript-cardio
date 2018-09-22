@@ -1,6 +1,8 @@
 import { Common } from './cardio.common';
 export declare class Cardio extends Common {
-	onScan(): Promise<any>;
+
+	public onScan(): Promise<any>;
+	
 }
 
 /**
